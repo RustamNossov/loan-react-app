@@ -1,0 +1,76 @@
+.schedule__form {
+    width: 40%;
+    height: 100%;
+    padding-top: 100px
+}
+
+.schedule__form-title {
+    font-weight: 800;
+    line-height: 64px;
+    font-size: 32px;
+    letter-spacing: -.64px
+}
+
+.schedule__form .form__item {
+    margin-top: 32px;
+    width: 340px;
+    position: relative
+}
+
+.schedule__form .form__item label {
+    display: block;
+    color: #000;
+    font-size: 15px;
+    font-weight: 900
+}
+
+.schedule__form .form__item input {
+    width: 340px;
+    height: 64px;
+    background: rgba(216, 216, 216, .3);
+    border-radius: 4px;
+    border: none;
+    margin-top: 11px;
+    padding: 22px 24px 23px 24px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -.28px
+}
+
+.schedule__form .form__item input::-webkit-input-placeholder {
+    color: #000
+}
+
+.schedule__form .form__item input::-ms-input-placeholder {
+    color: #000
+}
+
+.schedule__form .form__item input::placeholder {
+    color: #000
+}
+
+.schedule__form .form__item .icon {
+    position: absolute;
+    right: 24px;
+    top: 55%
+}
+
+.schedule__form .form__item .icon-double {
+    position: absolute;
+    right: 45px;
+    top: 53%
+}
+
+.schedule__form .form__item .icon-down {
+    right: 24px;
+    top: 62%
+}
+
+.schedule__form .form .btn {
+    margin-top: 36px;
+    background-color: #000;
+    color: #fff;
+    padding: 21px 66px 20px 66px
+}

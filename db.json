@@ -1,0 +1,102 @@
+{
+  "mainPageSlider": [
+    {
+      "slideNumer": 1,
+      "url": "slide_1_m.jpg",
+      "title1": "Building Your",
+      "title2": " Digital Brand"
+    },
+    {
+      "slideNumer": 2,
+      "url": "slide_2_m.jpg",
+      "title1": "Realtor",
+      "title2": " Partners"
+    },
+    {
+      "slideNumer": 3,
+      "url": "slide_3_m.jpg",
+      "title1": "Local",
+      "title2": " Marketing"
+    },
+    {
+      "slideNumer": 4,
+      "url": "slide_1_m.jpg",
+      "title1": "Digital",
+      "title2": " Marketing"
+    },
+    {
+      "slideNumer": 5,
+      "url": "slide_2_m.jpg",
+      "title1": "Lead",
+      "title2": " Management"
+    },
+    {
+      "slideNumer": 6,
+      "url": "slide_3_m.jpg",
+      "title1": "Quoting",
+      "title2": ""
+    },
+    {
+      "slideNumer": 7,
+      "url": "slide_2_m.jpg",
+      "title1": "Customer",
+      "title2": " Loan Experience"
+    },
+    {
+      "slideNumer": 8,
+      "url": "slide_3_m.jpg",
+      "title1": "Customer",
+      "title2": " For Life"
+    }
+  ],
+  "exploreMoreSlider": [
+    {
+      "slideNumer": 1,
+      "url": "slide_1_m.jpg",
+      "title": "Building Your Digital Brand",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    },
+    {
+      "slideNumer": 2,
+      "url": "slide_2_m.jpg",
+      "title": "Realtor Partners",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    },
+    {
+      "slideNumer": 3,
+      "url": "slide_3_m.jpg",
+      "title": "Local Marketing",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    },
+    {
+      "slideNumer": 4,
+      "url": "slide_1_m.jpg",
+      "title": "Digital Marketing",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    },
+    {
+      "slideNumer": 5,
+      "url": "slide_2_m.jpg",
+      "title": "Lead Management",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    },
+    {
+      "slideNumer": 6,
+      "url": "slide_3_m.jpg",
+      "title": "Quoting",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    },
+    {
+      "slideNumer": 7,
+      "url": "slide_1_m.jpg",
+      "title": "Customer Loan Experience",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    },
+    {
+      "slideNumer": 8,
+      "url": "slide_2_m.jpg",
+      "title": "Customer For Life",
+      "description": ["What is in the module #1", "What is in the module #2"]
+    }
+  ]
+}

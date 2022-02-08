@@ -1,0 +1,33 @@
+.join {
+    position: relative;
+    height: 100vh;
+    padding-top: 0;
+    overflow: hidden;
+    background-color: #2546bc
+}
+
+.join__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-between
+}
+
+.join__intro {
+    width: 35%;
+    height: 100%;
+    margin-left: 7%;
+    background: url(../../assets/img/Bitmap.jpg) center center no-repeat;
+    background-size: cover
+}
+
+.join__evolution {
+    width: 55%;
+    height: 100%;
+    padding-top: 65px
+}
+
+.join__evolution .title {
+    color: #fff
+}

@@ -1,0 +1,66 @@
+.difference {
+    position: relative;
+    height: 100vh;
+    padding-top: 0;
+    overflow: hidden
+}
+
+.difference__wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 102px
+}
+
+.difference__info {
+    width: 45%;
+    height: 100%;
+    margin-left: 7%;
+    padding-left: 66px;
+    padding-top: 65px;
+    padding-right: 90px;
+    background-color: #2546bc;
+    overflow: visible;
+    position: relative
+}
+
+.difference__info .title {
+    color: #fff
+}
+
+.difference__info .subtitle {
+    margin-top: 13px;
+    color: #fff;
+    opacity: 1
+}
+
+.difference__info-cards {
+    position: absolute;
+    width: 688px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+.difference__info-cards .officerold {
+    width: 45%;
+    height: 100%
+}
+
+.difference__info-cards .officernew {
+    width: 45%;
+    height: 100%
+}
+
+.difference__photo {
+    width: 50%;
+    height: 100%;
+    background: url(../../assets/img/main_light.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+    -webkit-transform: translateY(102px);
+    transform: translateY(102px)
+}

@@ -1,0 +1,205 @@
+.modules__slider {
+    width: 40%;
+    height: 100%;
+    background: #2546bc;
+    position: relative
+}
+
+.modules__content-slider {
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    height: 437px;
+    margin-top: 120px;
+    -webkit-transform: translateX(-144px);
+    transform: translateX(-144px);
+    padding: 20px 0
+}
+
+.modules__content-slider-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modules__content-slider .slick-prev {
+    position: absolute;
+    bottom: 70px;
+    left: -83%;
+    width: 43px;
+    height: 43px;
+    border: 2px solid #eaeaea;
+    border-radius: 100%;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.modules__content-slider .slick-prev svg {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-65%) translateY(-50%);
+    transform: translateX(-65%) translateY(-50%)
+}
+
+.modules__content-slider .slick-prev:hover {
+    border: 2px solid #6d53af
+}
+
+.modules__content-slider .slick-prev:hover svg path {
+    fill: #6d53af
+}
+
+.modules__content-slider .slick-next {
+    position: absolute;
+    bottom: 70px;
+    left: -520px;
+    width: 43px;
+    height: 43px;
+    border: 2px solid #eaeaea;
+    border-radius: 100%;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.modules__content-slider .slick-next svg {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-45%) translateY(-50%);
+    transform: translateX(-45%) translateY(-50%)
+}
+
+.modules__content-slider .slick-next:hover {
+    border: 2px solid #6d53af
+}
+
+.modules__content-slider .slick-next:hover svg path {
+    fill: #6d53af
+}
+
+.modules__content-slider .card {
+    flex-shrink: 0;
+    display: block;
+    width: 296px;
+    height: 417px;
+    border-radius: 8px;
+    padding: 32px;
+    padding-top: 213px;
+    overflow: hidden;
+    /* transition: .5s all; */
+    margin-right: 24px;
+    cursor: pointer;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .5);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover
+}
+
+.modules__content-slider .card__controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: 900;
+    line-height: normal;
+    font-size: 13px;
+    opacity: .5;
+    letter-spacing: 1.365px;
+    text-transform: uppercase;
+    transition: 1s all;
+    padding-top: 84px;
+}
+
+.modules__content-slider .card__controls-arrow {
+    opacity: 0;
+    transition: 1s all
+}
+
+.modules__content-slider .card__title {
+    font-weight: 900;
+    line-height: normal;
+    font-size: 24px;
+    letter-spacing: -.48px;
+    color: #fff;
+    margin-top: 12px;
+    opacity: .4;
+    transition: 1s all
+}
+
+.modules__content-slider .card__description {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: -.28px;
+    margin-top: 16px;
+    color: #fff;
+    opacity: 0;
+    transition: 1s all;
+}
+
+.modules__content-slider .card__description-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19px
+}
+
+.modules__content-slider .card__description-item .number {
+    font-weight: 700;
+    line-height: normal;
+    font-size: 14px;
+    letter-spacing: -.28px;
+    color: #fff;
+    mix-blend-mode: normal;
+    opacity: .3;
+    font-weight: 900
+}
+
+.modules__content-slider .card__description-item .descr-item {
+    color: #fff;
+    opacity: 1
+}
+
+/* .modules__content-slider .card-active {
+    padding-top: 213px
+}
+
+.modules__content-slider .card-active .card__controls-arrow {
+    opacity: 1
+}
+
+.modules__content-slider .card-active .card__title {
+    opacity: 1
+}
+
+.modules__content-slider .card-active .card__description {
+    opacity: 1
+} */
+
+
+ .modules__content-slider .slick-current.card__controls {
+    padding-top: 0px;
+}
+
+.modules__content-slider .slick-current.card__controls-arrow {
+    opacity: 1
+}
+
+.modules__content-slider .slick-current.card__title {
+    opacity: 1
+}
+
+.modules__content-slider .slick-current.card__description {
+    opacity: 1
+}
+
+/* .modules__content-slider .slick-current {
+    padding-top: 213px
+} */

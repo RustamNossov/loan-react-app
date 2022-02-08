@@ -1,0 +1,40 @@
+.feed {
+    position: relative;
+    height: 100vh;
+    padding-top: 100px;
+    overflow: hidden
+}
+
+.feed .title {
+    margin-left: 148px;
+    margin-top: -20px
+}
+
+.feed .colored {
+    position: absolute;
+    bottom: 0;
+    left: 84px;
+    width: 100%;
+    height: 40%;
+    z-index: -1
+}
+
+button.slick-prev:hover {
+    bottom: 1px;
+    left: 586px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+button.slick-next:hover {
+    bottom: 1px;
+    left: 646px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+button.slick-prev:active,
+button.slick-next:active {
+    top: 0px;
+    left: 0px;
+    box-shadow: none; 
+   
+}

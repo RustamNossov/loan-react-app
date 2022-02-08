@@ -1,0 +1,113 @@
+.join__evolution .form {
+    margin-top: 27px
+}
+
+.join__evolution .form__block {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 32px;
+    align-items: center
+}
+
+.join__evolution .form__block .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 21px 80px 22px 80px;
+    cursor: pointer;
+    display: block;
+    margin-right: 32px
+}
+
+.join__evolution .form__block .policy {
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+    mix-blend-mode: normal;
+    opacity: .89
+}
+
+.join__evolution .form__block div {
+    margin-right: 40px;
+    position: relative
+}
+
+.join__evolution .form__block div label {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900
+}
+
+.join__evolution .form__block div select {
+    width: 265px;
+    height: 64px;
+    background: rgba(216, 216, 216, .3);
+    border-radius: 4px;
+    border: none;
+    margin-top: 11px;
+    padding: 22px 24px 23px 24px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: -.28px;
+    -webkit-appearance: none
+}
+
+.join__evolution .form__block div input {
+    width: 340px;
+    height: 64px;
+    background: rgba(216, 216, 216, .3);
+    border-radius: 4px;
+    border: none;
+    margin-top: 11px;
+    padding: 22px 24px 23px 24px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -.28px
+}
+
+.join__evolution .form__block div input::-webkit-input-placeholder {
+    color: #fff
+}
+
+.join__evolution .form__block div input::-ms-input-placeholder {
+    color: #fff
+}
+
+.join__evolution .form__block div input::placeholder {
+    color: #fff
+}
+
+.join__evolution .form__block div input:focus {
+    background-color: #fff;
+    color: #000
+}
+
+.join__evolution .form__block div input:focus svg g {
+    opacity: 1
+}
+
+.join__evolution .form__block div input:focus svg g path {
+    stroke: #2546bc
+}
+
+.join__evolution .form__block div .icon {
+    position: absolute;
+    right: 24px;
+    top: 55%
+}
+
+.join__evolution .form__block div .icon-double {
+    position: absolute;
+    right: 45px;
+    top: 53%
+}
+
+.join__evolution .form__block div .icon-down {
+    right: 24px;
+    top: 62%
+}

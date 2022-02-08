@@ -1,0 +1,60 @@
+.sidecontrol {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    top: 0;
+    width: 7%;
+    height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, .1)
+}
+
+.sidecontrol__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-transform: rotate(-90deg) translateX(90px);
+    transform: rotate(-90deg) translateX(90px);
+    min-width: 200px
+}
+
+.sidecontrol__controls span,
+.sidecontrol__controls svg {
+    display: block
+}
+
+.sidecontrol__controls a {
+    display: block
+}
+
+.sidecontrol__controls a svg {
+    display: block;
+    width: 20px;
+    height: 24px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.sidecontrol__controls-count {
+    font-size: 13px;
+    letter-spacing: -.26px;
+    opacity: .4;
+    font-weight: 900
+}
+
+.sidecontrol__controls-show {
+    color: #2546bc;
+    font-size: 13px;
+    letter-spacing: -.26px;
+    font-weight: 900
+}
+.sidecontrol__controls-show.white {
+    color:white;
+}
+
+.sidecontrol a {
+    z-index: 30
+}
+
