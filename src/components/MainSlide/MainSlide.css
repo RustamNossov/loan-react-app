@@ -36,20 +36,6 @@
     cursor: pointer
 }
 
-.showup__next:hover,
-.showup__prev:hover{
-    top: -1px;
-    left: -1px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-}
-
-.showup__next:active,
-.showup__prev:active {
-    top: 0px;
-    left: 0px;
-    box-shadow: none; 
-   
-}
 
 .showup__next svg {
     position: absolute;
@@ -124,7 +110,7 @@
     position: absolute;
     bottom: 0;
     left: 7%;
-    padding: 40px 63px 40px 63px
+    padding: 40px 0 40px 63px
 }
 
 .showup__content-title {

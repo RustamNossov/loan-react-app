@@ -114,13 +114,13 @@
     opacity: .5;
     letter-spacing: 1.365px;
     text-transform: uppercase;
-    transition: 1s all;
+    
     padding-top: 84px;
 }
 
 .modules__content-slider .card__controls-arrow {
     opacity: 0;
-    transition: 1s all
+    
 }
 
 .modules__content-slider .card__title {
@@ -131,7 +131,7 @@
     color: #fff;
     margin-top: 12px;
     opacity: .4;
-    transition: 1s all
+    
 }
 
 .modules__content-slider .card__description {
@@ -142,7 +142,7 @@
     margin-top: 16px;
     color: #fff;
     opacity: 0;
-    transition: 1s all;
+    
 }
 
 .modules__content-slider .card__description-item {
@@ -167,39 +167,16 @@
     opacity: 1
 }
 
-/* .modules__content-slider .card-active {
-    padding-top: 213px
-}
 
-.modules__content-slider .card-active .card__controls-arrow {
-    opacity: 1
-}
-
-.modules__content-slider .card-active .card__title {
-    opacity: 1
-}
-
-.modules__content-slider .card-active .card__description {
-    opacity: 1
-} */
-
-
- .modules__content-slider .slick-current.card__controls {
+ .modules__content-slider .slick-current.card .card__controls {
+    transition: .5s all;
     padding-top: 0px;
 }
 
-.modules__content-slider .slick-current.card__controls-arrow {
+.modules__content-slider .slick-current.card .card__controls-arrow,
+.modules__content-slider .slick-current.card .card__title,
+.modules__content-slider .slick-current.card .card__description {
+    transition: .5s all;
     opacity: 1
 }
 
-.modules__content-slider .slick-current.card__title {
-    opacity: 1
-}
-
-.modules__content-slider .slick-current.card__description {
-    opacity: 1
-}
-
-/* .modules__content-slider .slick-current {
-    padding-top: 213px
-} */

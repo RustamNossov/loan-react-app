@@ -16,8 +16,8 @@ function ExploreModulesPage() {
                             url={'exploreMoreSlider'} 
                             containerItem = {'.modules__content-slider-container'}
                             oneSlideWidth = {320}
-                            activityClass = {'first'}
-                            selectors={['.card__controls', '.card__controls-count', '.card__controls-arrow', '.card__title', '.card__description']}
+                            activityClass = {'slick-current'}
+                            selectors={['.card']}
                             isInfinity={true}
                             />
 

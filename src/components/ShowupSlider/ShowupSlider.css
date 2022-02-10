@@ -93,12 +93,10 @@
     opacity: .5;
     letter-spacing: 1.365px;
     text-transform: uppercase;
-    transition: .5s all
 }
 
 .showup__content-slider .card__controls-arrow {
     opacity: 0;
-    transition: .5s all
 }
 
 .showup__content-slider .card__title {
@@ -109,7 +107,6 @@
     color: #fff;
     margin-top: 12px;
     opacity: .4;
-    transition: 1s all
 }
 
 .showup__content-slider .card__description {
@@ -124,29 +121,10 @@
    
 }
 
-/* .showup__content-slider .card__1 {
-    background: url(../../assets/img/slide_1_m.jpg) center center no-repeat;
-    background-size: cover
-}
-
-.showup__content-slider .card__2 {
-    background: url(../../assets/img/slide_2_m.jpg) center center no-repeat;
-    background-size: cover
-}
-
-.showup__content-slider .card__3 {
-    background: url(../../assets/img/slide_3_m.jpg) center center no-repeat;
-    background-size: cover
-} */
-
-.showup__content-slider .slick-current.card__controls-arrow {
+.showup__content-slider .card.slick-current .card__controls-arrow,
+.showup__content-slider .card.slick-current .card__title,
+.showup__content-slider .card.slick-current .card__description {
+    transition: .5s all;
     opacity: 1
 }
 
-.showup__content-slider .slick-current.card__title {
-    opacity: 1
-}
-
-.showup__content-slider .slick-current.card__description {
-    opacity: .5
-}

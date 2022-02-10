@@ -1,10 +1,11 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 //=======components========
 import SideControl from "../SideControl/SideControl";
 import Menu from "../Menu/Menu";
 import { OfficerCard, OfficerCardPlus } from "../OfficerCard/OfficerCard";
 
+import setOpacity from "../../hooks/setOpacity";
 //=======style========
 import './TheDefference.css';
 
@@ -36,8 +37,10 @@ const TheDefference = () => {
         }
     }
 
+    useEffect(()=>setOpacity('.page', "1"), [])
+
     return (
-        <div className="difference animated fadeIn">
+        <div className="difference page">
             <SideControl page={2}/>
             <Menu/>
 

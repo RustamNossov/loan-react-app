@@ -16,8 +16,8 @@ function MainSlidePage() {
                             url={'mainPageSlider'} 
                             containerItem = {'.showup__content-slider-container'}
                             oneSlideWidth = {331}
-                            activityClass = {'first'}
-                            selectors={['.card__controls-arrow', '.card__title']}
+                            activityClass = {'slick-current'}
+                            selectors={['.card']}
                             isInfinity={false}
                             />
 

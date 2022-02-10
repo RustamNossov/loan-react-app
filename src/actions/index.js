@@ -1,19 +1,19 @@
-export const sliderFetching = () => {
+export const dataFetching = () => {
     return {
-        type: 'SLIDER_FETCHING'
+        type: 'DATA_FETCHING'
     }
 }
 
-export const sliderFetched = (sliderItems) => {
+export const dataFetched = (data) => {
     return {
-        type: 'SLIDER_FETCHED',
-        payload: sliderItems
+        type: 'DATA_FETCHED',
+        payload: data
     }
 }
 
-export const sliderFetchingError = () => {
+export const dataFetchingError = () => {
     return {
-        type: 'SLIDER_FETCHING_ERROR'
+        type: 'DATA_FETCHING_ERROR'
     }
 }
 

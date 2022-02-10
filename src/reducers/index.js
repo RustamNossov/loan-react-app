@@ -1,26 +1,26 @@
 const initialState = {
-    sliderItems: [],
-    sliderLoadingStatus: 'idle',
+    items: [],
+    loadingStatus: 'idle',
     showedYoutubeVideoModal: false,
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'SLIDER_FETCHING':
+        case 'DATA_FETCHING':
             return {
                 ...state,
-                sliderLoadingStatus: 'loading'
+                loadingStatus: 'loading'
             }
-        case 'SLIDER_FETCHED':
+        case 'DATA_FETCHED':
             return {
                 ...state,
-                sliderItems: action.payload,
-                sliderLoadingStatus: 'idle'
+                items: action.payload,
+                loadingStatus: 'idle'
             }
-        case 'SLIDER_FETCHING_ERROR':
+        case 'DATA_FETCHING_ERROR':
             return {
                 ...state,
-                sliderLoadingStatus: 'error'
+                loadingStatus: 'error'
             }
         case 'SHOW_YOUTUBE_VIDEO_MODAL':
             return {

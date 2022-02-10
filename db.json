@@ -20,31 +20,31 @@
     },
     {
       "slideNumer": 4,
-      "url": "slide_1_m.jpg",
+      "url": "slide_4_m.jpg",
       "title1": "Digital",
       "title2": " Marketing"
     },
     {
       "slideNumer": 5,
-      "url": "slide_2_m.jpg",
+      "url": "slide_5_m.jpg",
       "title1": "Lead",
       "title2": " Management"
     },
     {
       "slideNumer": 6,
-      "url": "slide_3_m.jpg",
+      "url": "slide_6_m.jpg",
       "title1": "Quoting",
       "title2": ""
     },
     {
       "slideNumer": 7,
-      "url": "slide_2_m.jpg",
+      "url": "slide_7_m.jpg",
       "title1": "Customer",
       "title2": " Loan Experience"
     },
     {
       "slideNumer": 8,
-      "url": "slide_3_m.jpg",
+      "url": "slide_8_m.jpg",
       "title1": "Customer",
       "title2": " For Life"
     }
@@ -54,49 +54,185 @@
       "slideNumer": 1,
       "url": "slide_1_m.jpg",
       "title": "Building Your Digital Brand",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
     },
     {
       "slideNumer": 2,
       "url": "slide_2_m.jpg",
       "title": "Realtor Partners",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
     },
     {
       "slideNumer": 3,
       "url": "slide_3_m.jpg",
       "title": "Local Marketing",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
     },
     {
       "slideNumer": 4,
-      "url": "slide_1_m.jpg",
+      "url": "slide_4_m.jpg",
       "title": "Digital Marketing",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
     },
     {
       "slideNumer": 5,
-      "url": "slide_2_m.jpg",
+      "url": "slide_5_m.jpg",
       "title": "Lead Management",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
     },
     {
       "slideNumer": 6,
-      "url": "slide_3_m.jpg",
+      "url": "slide_6_m.jpg",
       "title": "Quoting",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
     },
     {
       "slideNumer": 7,
-      "url": "slide_1_m.jpg",
+      "url": "slide_7_m.jpg",
       "title": "Customer Loan Experience",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
     },
     {
       "slideNumer": 8,
-      "url": "slide_2_m.jpg",
+      "url": "slide_8_m.jpg",
       "title": "Customer For Life",
-      "description": ["What is in the module #1", "What is in the module #2"]
+      "description": [
+        "What is in the module #1",
+        "What is in the module #2"
+      ]
+    }
+  ],
+  "howAreYouSlider": [
+    {
+      "slideNumer": 1,
+      "url": "feed_1.png",
+      "authorName": "Andrew Jackson",
+      "preview": [
+        "Preview text of the full",
+        "story by Andrew."
+      ],
+      "profession": "profession",
+      "from": "instagram",
+      "videoLink": "",
+      "timing": "3:20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "slideNumer": 2,
+      "url": "feed_2.png",
+      "authorName": "Cynthia Weber",
+      "preview": [
+        "Preview text of the full",
+        "story by Cynthia."
+      ],
+      "profession": "profession",
+      "from": "instagram",
+      "videoLink": "",
+      "timing": "3:20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "slideNumer": 3,
+      "url": "feed_3.png",
+      "authorName": "Owen Thornton",
+      "preview": [
+        "Preview text of the full",
+        "story by Owen."
+      ],
+      "profession": "profession",
+      "from": "instagram",
+      "videoLink": "",
+      "timing": "3:20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "slideNumer": 4,
+      "url": "feed_4.png",
+      "authorName": "Marion Murphy",
+      "preview": [
+        "Preview text of the full",
+        "story by Marion."
+      ],
+      "profession": "profession",
+      "from": "instagram",
+      "videoLink": "",
+      "timing": "3:20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "slideNumer": 5,
+      "url": "feed_5.png",
+      "authorName": "Stive Morgan",
+      "preview": [
+        "Preview text of the full",
+        "story by Stive."
+      ],
+      "profession": "profession",
+      "from": "instagram",
+      "videoLink": "",
+      "timing": "3:20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "slideNumer": 6,
+      "url": "feed_6.png",
+      "authorName": "James Bond",
+      "preview": [
+        "Preview text of the full",
+        "story by James."
+      ],
+      "profession": "profession",
+      "from": "instagram",
+      "videoLink": "",
+      "timing": "3:20",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  ],
+  "formData": [
+    {
+      "id": "34b2e80e-9228-4e7a-9d4f-f55d8cb1a6fb",
+      "name": "Rus",
+      "position": "dewper",
+      "city": "Paris",
+      "email": "dfds@re.sdf",
+      "phone": "343432432434"
+    },
+    {
+      "id": "5083b7e5-9943-4218-8b6b-cf3878940626",
+      "name": "Rus",
+      "position": "dewper",
+      "city": "Paris",
+      "email": "dfds@re.sdf",
+      "phone": "343432432434"
+    }
+  ],
+  "sheduleFormData": [
+    {
+      "id": "dc042322-0fc3-4dac-b038-87b55aa4caad",
+      "name": "Rus",
+      "email": "sdfsdfds@jsd.yu",
+      "date": "2022-02-17T18:00:00.000Z"
     }
   ]
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useHttp } from '../../hooks/http.hook';
 import { useImgImport } from "../../hooks/imgImport.hook";
 import { useDispatch, useSelector } from "react-redux";
-import { sliderFetched, sliderFetchingError } from '../../actions';
+import { dataFetched, dataFetchingError } from '../../actions';
 
 
 const withSlider = (BaseComponent, SliderComponent) => {
@@ -10,27 +10,29 @@ const withSlider = (BaseComponent, SliderComponent) => {
         const { request } = useHttp();
         const importImg = useImgImport();
         const dispatch = useDispatch();
-        const { sliderItems } = useSelector(state=>state);
+        const { items, dataLoadingStatus } = useSelector(state=>state);
         const [elements, setElements] = useState([])
         const [imgUrls, setImgUrls] = useState([])
         const slideWidth = useRef(oneSlideWidth) //331 // 320
         const sliderContainer = useRef();
 
         useEffect(()=>{
+            
             request(`http://localhost:3001/${url}`) //mainPageSlider //exploreMoreSlider
                 .then(data=>{
-                        dispatch(sliderFetched(data));
+                        dispatch(dataFetched(data));
                         data.forEach(({url}) => {
                             importImg(url)
                                 .then( urlImg => setImgUrls(oldData=>[...oldData, urlImg]))
                     })
 
                     })
-                .catch(sliderFetchingError())
+                .catch(dataFetchingError())
             sliderContainer.current = document.querySelector(containerItem); //'.showup__content-slider-container' //modules__content-slider-container      
         
-            
+           
         },[])
+        
 
         // ========== getting slider elements ==============
 
@@ -39,7 +41,7 @@ const withSlider = (BaseComponent, SliderComponent) => {
             const newArr = [arr[arr.length-1], ...arr]
             const newImgUrls = [imgUrls[imgUrls.length-1], ...imgUrls]
             const elems = newArr.map((data, i) => {
-                const newClasses = i === 1 ? activityClass : '';
+                const newClasses = i === 1 ? 'first' : '';
                 return  <SliderComponent 
                                 key={i}
                                 data = {data}
@@ -54,27 +56,28 @@ const withSlider = (BaseComponent, SliderComponent) => {
         const setActivityClass = (selectorsArr, trigger) => {
             selectorsArr.forEach(item => {
                 if (trigger === 'add') {
-                    document.querySelector(`${item}.${activityClass}`).classList.add('slick-current');
+                    document.querySelector(`${item}.first`).classList.add(activityClass);
                 } else {
-                    document.querySelector(`${item}.${activityClass}`).classList.remove('slick-current');
+                    document.querySelector(`${item}.first`).classList.remove(activityClass);//'slick-current'
                 }
                     
             })
         }
         useEffect(()=>{
         
-            if (sliderItems.length > 0 && sliderItems.length === imgUrls.length) {
+            if (items.length > 0 && items.length === imgUrls.length) {
 
-                setElements(getElements(sliderItems));
+                setElements(getElements(items));
                 sliderContainer.current.style.transform = `translateX(-${slideWidth.current}px)`;
                 
             }
-        },[sliderItems, imgUrls]);
+        },[items, imgUrls]);
 
         useEffect(()=>{
-            
-            if (elements.length > 0 && elements.length===sliderItems.length+1) {
-                setActivityClass(selectors, "add");
+           
+            if (elements.length > 0 && elements.length===items.length+1) {
+                setActivityClass(selectors, "add")
+                
                 if (isInfinity) {
                     const intervalId = setInterval(()=>onNextSlide(),3000)
                         return(() => {
@@ -85,7 +88,6 @@ const withSlider = (BaseComponent, SliderComponent) => {
 
             
             
-            
         }, [elements])
         
         //========on click Next btn ===========//
@@ -93,15 +95,15 @@ const withSlider = (BaseComponent, SliderComponent) => {
             setActivityClass(selectors, "remove");
             sliderContainer.current.style.transition = "all 0.3s"
             sliderContainer.current.style.transform = `translateX(-${slideWidth.current*2}px)`
-            const newSliderItems = [...sliderItems.slice(1), sliderItems[0]]
+            const newSliderItems = [...items.slice(1), items[0]]
             const newImgUrls = [...imgUrls.slice(1), imgUrls[0]]
                 
             setTimeout(()=>{
                     setImgUrls(newImgUrls)
-                    dispatch(sliderFetched(newSliderItems))
+                    dispatch(dataFetched(newSliderItems))
                     sliderContainer.current.style.transition = "all 0s"
                     sliderContainer.current.style.transform = `translateX(-${slideWidth.current}px)`
-                    setActivityClass(selectors, "add");
+                    //setActivityClass(selectors, "add");
                 }, 300)
     
         }
@@ -113,15 +115,15 @@ const withSlider = (BaseComponent, SliderComponent) => {
             setActivityClass(selectors, "remove");
             sliderContainer.current.style.transition = "all 0.3s"
             sliderContainer.current.style.transform = "translateX(0px)"
-            const newSliderItems = [ sliderItems[sliderItems.length-1], ...sliderItems.slice(0, sliderItems.length-1)]
+            const newSliderItems = [ items[items.length-1], ...items.slice(0, items.length-1)]
             const newImgUrls = [imgUrls[imgUrls.length-1], ...imgUrls.slice(0, imgUrls.length-1)]
                 
             setTimeout(()=>{
                     setImgUrls(newImgUrls)
-                    dispatch(sliderFetched(newSliderItems))
+                    dispatch(dataFetched(newSliderItems))
                     sliderContainer.current.style.transition = "all 0s"
                     sliderContainer.current.style.transform = "translateX(-331px)"
-                    setActivityClass(selectors, "add");
+                    //setActivityClass(selectors, "add");
                 }, 300)
     
         }

@@ -1,55 +1,21 @@
-import React, {useState, useEffect} from "react";
 
 //=====style=========
 import "./HowAreYouShowinUpSlider.css"
 
-const HowAreYouShowinUpSlider = () => {
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
-    const [image, setImage] = useState([{fileName: 'feed_1.png', file: null},
-                                        {fileName: 'feed_2.png', file: null},
-                                        {fileName: 'feed_3.png', file: null},
-                                        {fileName: 'feed_1.png', file: null},
-                                        {fileName: 'feed_2.png', file: null},
-                                        {fileName: 'feed_3.png', file: null}])
-    
-
-
-    const fetchImage = async (item) => {
-        try {
-            const response = await import(`../../assets/img/${item.fileName}`) // change relative path to suit your needs
-            return await response.default
-        } catch (err) {
-            setError(true)
-        } finally {
-            setLoading(false)
-        }
-    }
-
-    useEffect(() => {
-        const newData = [...image];
-        image.forEach((item, i) => {
-            fetchImage(item)
-            .then(result => { 
-                newData[i] = {...item, file: result}; 
-                setImage(newData);
-            })
-        })
-    }, [])
-
-
+const HowAreYouShowinUpSlider = ({data , urlImg, newClasses}) => {
+const {authorName, preview, profession, from, videoLink, timing, description} = data;
     return (
-                 <div className="feed__item feed__item-active">
+                 <div className={`feed__item ${newClasses}`}>
                     <div className="feed__item-info">
                         <div className="photo">
-                            <img src={image[0].file} alt="Andrew"/>
+                            <img src={urlImg} alt={authorName}/>
                         </div>
                         <div className="author">
-                            <div className="author__name">Andrew Jackson</div>
-                            <div className="author__preview">Preview text of the full<br/>
-                                story by Andrew.</div>
-                            <div className="author__profession">profession</div>
-                            <div className="author__from">posted from <span>instagram</span></div>
+                            <div className="author__name">{authorName}</div>
+                            <div className="author__preview">{preview[0]}<br/>
+                                    {preview[1]}</div>
+                            <div className="author__profession">{profession}</div>
+                            <div className="author__from">posted from <span>{from}</span></div>
                         </div>
                     </div>
                     <hr/>
@@ -60,12 +26,12 @@ const HowAreYouShowinUpSlider = () => {
                             </svg>
                         </div>
                         <div className="timing">
-                            play video (3:20)
+                            {`play video (${timing})`}
                         </div>
                     </div>
                     <hr/>
                     <div className="feed__item-descr">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        {description}
                     </div>
                 </div>
                 

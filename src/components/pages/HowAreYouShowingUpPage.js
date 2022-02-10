@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
-import HowAreYouShowingUp from '../HowAreYouShowingUp/HowAreYouShowingUp';
+import HowAreYouShowingUpComponent from "../HowAreYouShowingUp/HowAreYouShowingUp";
 
 function HowAreYouShowingUpPage() {
     return (
@@ -12,7 +12,14 @@ function HowAreYouShowingUpPage() {
                 />
                 <title>Error</title>
             </Helmet>
-                <HowAreYouShowingUp/>
+                <HowAreYouShowingUpComponent
+                        url={'howAreYouSlider'} 
+                        containerItem = {'.feed__slider-container'}
+                        oneSlideWidth = {273}
+                        activityClass = {'feed__item-active'}
+                        selectors={['.feed__item']}
+                        isInfinity={false}
+                        />
 
         </>
     )
