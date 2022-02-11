@@ -8,13 +8,15 @@
     align-items: center;
     justify-content: space-between;
     padding-right: 40px;
-    padding-left: 150px
+    padding-left: 150px;
+    z-index:990;
 }
 
 .menu__block {
+    width: 100%;
     min-width: 157px;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center
 }
 
@@ -48,3 +50,4 @@ a.menu__block-schedule:active {
     box-shadow: none; 
    
 }
+

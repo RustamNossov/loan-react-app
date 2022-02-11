@@ -8,9 +8,9 @@ function MainSlidePage() {
             <Helmet>
                 <meta
                     name="description"
-                    content="Error page"
+                    content="Main page"
                 />
-                <title>Error</title>
+                <title>Bringitup</title>
             </Helmet>
                 <MainSlideComponent
                             url={'mainPageSlider'} 

@@ -92,3 +92,35 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .feed {
+        overflow: scroll;
+        padding-top: 13vh;
+        width: 100%;
+        /* height: 730px; */
+    }
+
+    .feed .title {
+        margin-left: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        font-size: 3em;
+    }
+    .feed .colored {
+        left: 0;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .feed__slider {
+        width: 555px;
+        position: static;
+    }
+
+    .feed__slider .buttons-container {
+        display: none;
+    }
+
+    .feed__slider .feed__item  {}
+}

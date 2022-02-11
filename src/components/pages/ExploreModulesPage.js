@@ -8,9 +8,9 @@ function ExploreModulesPage() {
             <Helmet>
                 <meta
                     name="description"
-                    content="Error page"
+                    content="Explore the Modules"
                 />
-                <title>Error</title>
+                <title>Bringitup</title>
             </Helmet>
                 <ExploreModulesComponent 
                             url={'exploreMoreSlider'} 

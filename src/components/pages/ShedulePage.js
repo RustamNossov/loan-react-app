@@ -8,9 +8,9 @@ function ShedulePage() {
             <Helmet>
                 <meta
                     name="description"
-                    content="Error page"
+                    content="Schedule an appointment with John"
                 />
-                <title>Error</title>
+                <title>Bringitup</title>
             </Helmet>
                 <Shedule/>
 

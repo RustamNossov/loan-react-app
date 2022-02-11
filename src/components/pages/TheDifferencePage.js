@@ -8,9 +8,9 @@ function TheDifferencePage() {
             <Helmet>
                 <meta
                     name="description"
-                    content="Error page"
+                    content="The difference between education 10 years ago and today"
                 />
-                <title>Error</title>
+                <title>Bringitup</title>
             </Helmet>
                 <TheDifference/>
 

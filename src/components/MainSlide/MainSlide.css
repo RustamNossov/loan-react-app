@@ -1,7 +1,6 @@
 .showup {
     position: relative;
     height: 100vh;
-    padding-top: 100px
 }
 
 .showup__prev {
@@ -152,14 +151,113 @@
     overflow: hidden
 }
 
-/* .showup__content .card-active .card__title {
-    opacity: 1;
+.play {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer
 }
 
-.showup__content .card-active .card__controls-count {
-    opacity: 1;
+
+
+@media screen and (max-width: 1024px) {
+    .showup__content {
+       display: block;
+       height: 357px;
+       padding-top: 20px;
+    }
+
+    .showup__content-title {
+        display: flex;
+        padding-bottom: 20px;
+        font-size: 1.6em;
+    }
+    .showup__content-title>div {
+        position: fixed;
+        left: 10%;
+        bottom: 150px;
+
+    }
+
+    .showup__content-slider {
+        margin-left: 10%;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .showup{
+        overflow: scroll;
+    }
+    .showup__wrapper{
+        margin-top: 7%;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: fit-content;
+    }
+    .showup__intro {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    .showup__intro .subtitle {
+        margin-top: 0px;
+    }
+    .showup__intro .btn {
+        margin-top: 0;
+        height: 70px;
+    }
+
+    .showup__video {
+        width: 70%;
+        height: 30vh;
+        flex-wrap: nowrap;
+        margin-bottom: 30px;
+    }
+
+    .showup__video .play{
+        top: 40%
+    }
+
+    .showup__content {
+        position:static;
+        width: 100%;
+        height: fit-content;
+        padding-right: 10px;
+        padding-left: 10px;
+      
+
+    }
+    .showup__content-slider {
+        margin-left: 0;
+        width: 307px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .showup__content-title{
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .showup__content-title>div {
+        display: none;
+    }
 }
 
-.showup__content .card-active .card__controls-arrow {
-    opacity: 1;
-} */
+@media screen and (max-width: 670px) {
+    .showup__intro {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .showup__intro-left .subtitle {
+        margin-bottom: 20px;
+    }
+}

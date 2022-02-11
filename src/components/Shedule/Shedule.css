@@ -10,14 +10,14 @@
     width: 100%;
     height: 100%;
     align-items: flex-start;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .schedule__info {
     position: relative;
-    width: 50%;
+    width: 54%;
     height: 100%;
-    margin-left: 84px;
+    margin-left: 7%;
     padding-top: 87px;
     background: url(../../assets/img/talk_bg.jpg) center center no-repeat;
     background-size: cover
@@ -59,7 +59,9 @@
     border: 1px solid #979797;
     box-sizing: border-box;
     border-radius: 8px;
-    position: relative
+    position: relative;
+    margin-left: 10px;
+    
 }
 
 .schedule__info .colored .video .play {
@@ -81,4 +83,53 @@
 
 .schedule__info .colored .contacts__links a {
     margin-right: 24px
+}
+
+@media screen and (max-width: 1024px) {
+    .schedule__wrapper {
+        display: block;
+        overflow: scroll;
+    }
+
+    .schedule__info {
+        width: 93%;
+        
+    }
+
+    .schedule__info .colored {
+        padding-right: 56px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .schedule__wrapper {
+        margin-top: 7%;
+    }
+
+    .schedule__info {
+        width: 100%;
+        margin-left: 0;
+    }
+    .schedule__info .colored {
+        flex-direction: column-reverse;
+    }
+
+    .schedule__info .colored .contacts__mail, 
+    .schedule__info .colored .contacts__phone ,
+    .schedule__info .colored .contacts__links{
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .schedule__info .colored .video {
+        height: 74px;
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .schedule__info .title {
+        font-size: 2.8em;
+    }
 }

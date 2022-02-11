@@ -1,17 +1,21 @@
-import React from "react";
+import {useEffect} from "react";
 
 //=======components========
 import SideControl from "../SideControl/SideControl";
 import Menu from "../Menu/Menu";
 import HowAreYouShowingUpSlider from "../HowAreYouShowinUpSlider/HowAreYouShowinUpSlider";
 import withSlider from "../withSlider/withSlider";
-
+import setOpacity from '../../hooks/setOpacity';
 //========styles===========
 import "./HowAreYouShowingUp.css";
 
 const HowAreYouShowingUp = ({onNextSlide, onPrevSlide, elements}) => {
+
+    useEffect(()=>setOpacity('.page', "1"), [])
+
+
     return (
-        <div className="feed">
+        <div className="feed page">
             <SideControl page={5}/>
             <Menu/>
 

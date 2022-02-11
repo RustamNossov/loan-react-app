@@ -8,9 +8,9 @@ function HowAreYouShowingUpPage() {
             <Helmet>
                 <meta
                     name="description"
-                    content="Error page"
+                    content="How are you Showing Up & Evolving"
                 />
-                <title>Error</title>
+                <title>Bringitup</title>
             </Helmet>
                 <HowAreYouShowingUpComponent
                         url={'howAreYouSlider'} 

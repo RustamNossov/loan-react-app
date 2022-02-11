@@ -8,9 +8,9 @@ function LetUsHelpYouPage() {
             <Helmet>
                 <meta
                     name="description"
-                    content="Error page"
+                    content="Help page"
                 />
-                <title>Error</title>
+                <title>Bringitup</title>
             </Helmet>
                 <LetUsHelpYou/>
 

@@ -2,13 +2,14 @@
     position: relative;
     height: 100vh;
     padding-top: 0;
-    overflow: hidden;
+    overflow: scroll;
     background-color: #2546bc
 }
 
 .join__wrapper {
     display: flex;
-    width: 100%;
+    width: 93%;
+    margin-left: 7%;
     height: 100%;
     align-items: flex-start;
     justify-content: space-between
@@ -16,8 +17,7 @@
 
 .join__intro {
     width: 35%;
-    height: 100%;
-    margin-left: 7%;
+    height: 100vh;
     background: url(../../assets/img/Bitmap.jpg) center center no-repeat;
     background-size: cover
 }
@@ -31,3 +31,57 @@
 .join__evolution .title {
     color: #fff
 }
+
+@media screen and (max-width: 1330px) {
+    .join {
+        padding-bottom: 30px;
+    }
+
+    .join__intro{
+        position: fixed;
+    }
+    .join__evolution {
+        margin-left: 45%;
+    }
+    .join__evolution .form__block {
+        flex-direction: column;
+        /* justify-content: left; */
+        align-items:flex-start;
+        margin-top: 0;
+    }
+
+    .join__evolution form {
+        padding-bottom: 30px;
+    }
+
+    .join__evolution .form__block div,
+    .join__evolution .form__block .btn {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .join__intro {
+        display: none;
+    }
+
+    .join__wrapper {
+        margin: 7vh 20px 0 20px;
+    }
+
+    .join__evolution {
+        margin-left: 10%;
+        max-width: 68%;
+    }
+
+
+
+    
+}
+
+@media screen and (max-width: 455px) {
+    .join__evolution{
+        margin: 0;
+    }
+}
+

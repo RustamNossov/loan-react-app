@@ -22,6 +22,7 @@ const MainSlide = ({onNextSlide, onPrevSlide, elements}) => {
     const {showedYoutubeVideoModal} = useSelector(state=>state);
     
     useEffect(()=>setOpacity('.page', "1"), [])
+    
     //=======show video ============    https://www.youtube.com/embed/vZ4Sne0wdxY
     const onShowVideo = () => {
         dispatch(showYoutubeVideoModal())
@@ -30,13 +31,17 @@ const MainSlide = ({onNextSlide, onPrevSlide, elements}) => {
     return (
         <div className="showup page">
             { showedYoutubeVideoModal ? <ModalVideoPlayer videoLink={"https://www.youtube.com/embed/vZ4Sne0wdxY"}/> : null }
-            <Menu/>
+            
             <SideControl page={1}/>
-
+            
+            {/* <Menu logotype={true} btn={true}/> */}
             <div className="showup__wrapper">
+           
                 <div className="showup__intro">
-                    <div className="title">bring<span>it</span>up</div>
-                    <div className="subtitle">We can give you an education that you need</div>
+                    <div className="showup__intro-left">
+                        <div className="title">bring<span>it</span>up</div>
+                        <div className="subtitle">We can give you an education that you need</div>
+                    </div>
                     <button className="btn">Get free access</button>
                 </div>
                 <div className="showup__video">
@@ -56,10 +61,7 @@ const MainSlide = ({onNextSlide, onPrevSlide, elements}) => {
             </div>
 
             <div class="showup__content">
-                <div class="showup__content-title">Explore Educational<br/>
-                    Modules To Evolve <br/>
-                    Your Career
-                    <div>
+                <div class="showup__content-title">Explore Educational Modules To Evolve Your Career<div>
                         <button type="button" onClick={()=>onPrevSlide()} class="showup__prev slick-prev">
                             <div class="play__content">
                                 <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">

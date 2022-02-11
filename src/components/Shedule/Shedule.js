@@ -1,19 +1,21 @@
-import React from "react";
+import {useEffect} from "react";
 
 //=======components========
 import SideControl from "../SideControl/SideControl";
 import Menu from "../Menu/Menu";
 import SheduleForm from "../SheduleForm/SheduleForm";
+import setOpacity from "../../hooks/setOpacity";
 
 //========style==============
 import "./Shedule.css";
 
 const Shedule = () => {
+    useEffect(()=>setOpacity('.page', "1"), [])
 
     return (
-        <div className="schedule">
+        <div className="schedule page">
             <SideControl page={6}/>
-            <Menu/>
+            <Menu bnt={false} logotype={false}/>
 
 
             <div className="schedule__wrapper">

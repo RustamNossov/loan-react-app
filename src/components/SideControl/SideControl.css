@@ -1,5 +1,5 @@
 .sidecontrol {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,8 +8,14 @@
     top: 0;
     width: 7%;
     height: 100vh;
+    background: white;
+    z-index: 998;
     border-right: 1px solid rgba(0, 0, 0, .1)
 }
+.sidecontrol.colored {
+    background-color: #2546bc
+}
+
 
 .sidecontrol__controls {
     display: flex;
@@ -58,3 +64,23 @@
     z-index: 30
 }
 
+@media screen and (max-width: 768px) {
+
+    .sidecontrol {
+        position: fixed;
+        width: 100vw;
+        height: 7%;
+        flex-direction:row;
+        padding: 20px 20px;
+        border-bottom: 1px solid #E6E6E6;
+    }
+    .sidecontrol__controls a svg {
+        transform: rotate(-90deg);
+    }
+    .sidecontrol__controls {
+        transform: none;
+        width: 30%;
+        flex-direction:row-reverse;
+    }
+    
+}

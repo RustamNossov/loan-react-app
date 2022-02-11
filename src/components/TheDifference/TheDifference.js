@@ -42,7 +42,7 @@ const TheDefference = () => {
     return (
         <div className="difference page">
             <SideControl page={2}/>
-            <Menu/>
+            <Menu  btn={true}/>
 
             <div className="difference__wrapper">
                 <div className="difference__info">
