@@ -1,4 +1,9 @@
 import {useEffect} from "react";
+import  { useTouchSlide } from "../../hooks/onTouchSlide.hook";
+import ModalVideoPlayer from "../ModalVideoPlayer/ModalVideoPlayer";
+import { showYoutubeVideoModal } from '../../actions';
+import { useDispatch, useSelector } from "react-redux";
+
 
 //=======components========
 import SideControl from "../SideControl/SideControl";
@@ -10,12 +15,19 @@ import setOpacity from '../../hooks/setOpacity';
 import "./HowAreYouShowingUp.css";
 
 const HowAreYouShowingUp = ({onNextSlide, onPrevSlide, elements}) => {
-
-    useEffect(()=>setOpacity('.page', "1"), [])
-
+    const {onTouchStart, onTouchMove, onTouchEnd} = useTouchSlide();
+    const {showedYoutubeVideoModal} = useSelector(state=>state);
+    const dispatch = useDispatch();
+    
+    useEffect(()=>{
+        dispatch(showYoutubeVideoModal(''));
+        setOpacity('.page', "1");
+    }, [])
 
     return (
         <div className="feed page">
+            { showedYoutubeVideoModal && <ModalVideoPlayer videoLink={showedYoutubeVideoModal}/>} 
+
             <SideControl page={5}/>
             <Menu/>
 
@@ -24,7 +36,11 @@ const HowAreYouShowingUp = ({onNextSlide, onPrevSlide, elements}) => {
                 &amp; Evolving
             </div>
             <div className="colored"></div>
-            <div className="feed__slider">
+            <div className="feed__slider"
+                        onTouchStart={(e)=>onTouchStart(e)}
+                        onTouchMove={(e)=>onTouchMove(e)}
+                        onTouchEnd={()=>onTouchEnd(onNextSlide, onPrevSlide)}
+                        >
                     <div className="feed__slider-container">
                             {elements}
                     </div>

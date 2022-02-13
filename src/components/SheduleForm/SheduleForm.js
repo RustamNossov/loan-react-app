@@ -1,28 +1,30 @@
-import {useState,useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage, useField,useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuidv4 } from 'uuid';
 import { useHttp } from '../../hooks/http.hook';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector  } from "react-redux";
 import { dataFetched, dataFetching, dataFetchingError } from '../../actions';
 import DatePicker from "react-datepicker";
+import Spinner from "../Spinner/Spinner";
+
 //========style==========
 import "./SheduleForm.css";
 import "react-datepicker/dist/react-datepicker.css";
 const SheduleForm = () =>{
     const { request } = useHttp();
     const dispatch = useDispatch();
-    const [startDate, setStartDate] = useState(new Date());
+    const {loadingStatus} = useSelector(state=>state);
+
 
     const onSubmitForm = (values, actions) => {
         const newValues = {id: uuidv4(), ...values}
         dispatch(dataFetching())
-        request(`http://localhost:3001/sheduleFormData`, 'POST', JSON.stringify(newValues))
+        request(`http://localhost:300/sheduleFormData`, 'POST', JSON.stringify(newValues))
             .then(()=>{
                     actions.resetForm(); 
                     dispatch(dataFetched([]))
                 })
-            .cath(dispatch(dataFetchingError()))                
+            .cath(()=>dispatch(dataFetchingError()))                
     }
 
     const DatePickerField = ({ ...props }) => {
@@ -54,8 +56,10 @@ const SheduleForm = () =>{
                 email: Yup.string()
                         .email('Please enter a valid email adress')
                         .required('Required field'),
-                date: Yup.string()
+                date: Yup.date()
+                        .min(new Date(), 'Please select a future date')
                         .required('Required field'),
+
 
             })}
             onSubmit={(values, actions) => onSubmitForm(values, actions)}
@@ -99,7 +103,11 @@ const SheduleForm = () =>{
                             <ErrorMessage component="div" className="error" name="date"/>
                         </div>
                         
-                        <button type="submit" className="btn">Schedule</button>
+                        <button type="submit" className="btn">
+                            {loadingStatus === 'loading' ? <Spinner className="spinner" /> : "Schedule"}
+                        </button>
+                        {loadingStatus === 'error' &&  <div className="error">Something went wrong. Please try again latter.</div> }
+
                     </Form>
         </Formik>
     )

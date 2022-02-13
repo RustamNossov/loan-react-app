@@ -17,9 +17,10 @@ export const dataFetchingError = () => {
     }
 }
 
-export const showYoutubeVideoModal = () => {
+export const showYoutubeVideoModal = (data) => {
     return {
-        type: 'SHOW_YOUTUBE_VIDEO_MODAL'
+        type: 'SHOW_YOUTUBE_VIDEO_MODAL',
+        payload: data
     }
 }
 

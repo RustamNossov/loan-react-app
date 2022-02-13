@@ -1,19 +1,20 @@
 import {useState, useEffect} from "react";
+import  { useTouchSlide } from "../../hooks/onTouchSlide.hook";
 
 //=======components========
 import SideControl from "../SideControl/SideControl";
-import Menu from "../Menu/Menu";
 import ExploreSlide from "../ExploreSlide/ExploreSlide";
 import withSlider from "../withSlider/withSlider";
 import setOpacity from "../../hooks/setOpacity";
 
 //======style=========
 import "./ExploreModules.css"
-import closeItem from "../../assets/icons/close.svg"
 
 
 const ExploreModules = ({onNextSlide, onPrevSlide, elements}) => {
     const [modalHidden, setModalHidden] = useState(true)
+    const {onTouchStart, onTouchMove, onTouchEnd} = useTouchSlide();
+
     setTimeout(()=>setModalHidden(false), 5000)
 
     useEffect(()=>setOpacity('.page', "1"), [])
@@ -74,7 +75,11 @@ const ExploreModules = ({onNextSlide, onPrevSlide, elements}) => {
                     
                 </div>
                 <div className="modules__slider">
-                    <div className="modules__content-slider">
+                    <div className="modules__content-slider"
+                        onTouchStart={(e)=>onTouchStart(e)}
+                        onTouchMove={(e)=>onTouchMove(e)}
+                        onTouchEnd={()=>onTouchEnd(onNextSlide, onPrevSlide)}
+                        >
                         <div className="modules__content-slider-container">
 
                             {elements}

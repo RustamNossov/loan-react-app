@@ -11,7 +11,8 @@
     width: 100%;
     height: 100%;
     align-items: flex-start;
-    justify-content: space-between
+    justify-content: space-between;
+    overflow: scroll;
 }
 
 .modules__info {
@@ -96,7 +97,7 @@
 
 
 .modules__info .hanson {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 455px;
     height: 164px;

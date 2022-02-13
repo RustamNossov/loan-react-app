@@ -194,7 +194,7 @@
         overflow: scroll;
     }
     .showup__wrapper{
-        margin-top: 7%;
+        margin-top: 7vh;
         flex-direction: column;
         justify-content: start;
         align-items: center;

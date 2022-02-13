@@ -1,7 +1,6 @@
 import { useCallback } from "react";
 
 export const useImgImport = () => {
-    // const [process, setProcess] = useState('waiting');
 
     const importImg = useCallback( async (fileName) => {
         

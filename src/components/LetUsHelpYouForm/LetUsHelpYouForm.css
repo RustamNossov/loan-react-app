@@ -2,6 +2,11 @@
     margin-top: 27px
 }
 
+.join__evolution .form .error.white {
+    margin-top: 5px;
+    font-size: 1em;
+}
+
 .join__evolution .form__block {
     display: flex;
     justify-content: flex-start;
@@ -15,7 +20,9 @@
     padding: 21px 80px 22px 80px;
     cursor: pointer;
     display: block;
-    margin-right: 32px
+    margin-right: 32px;
+    height: 59px;
+    width: 192px;
 }
 
 .join__evolution .form__block .policy {

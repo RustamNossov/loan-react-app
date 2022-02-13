@@ -85,6 +85,9 @@
     justify-content: center;
     padding-top: 20px
 }
+.feed__item-play:hover {
+    cursor: pointer;
+}
 
 .feed__item-play .playvideo {
     width: 26px;
@@ -249,3 +252,27 @@
     opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+    .feed__item-active {
+        width: 335px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 600px;
+    }
+
+    .feed__item-active .feed__item-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feed__item-active .feed__item-info .author {
+        padding-left: 0;
+    }
+    .feed__item-active .feed__item-info .author__profession,
+    .feed__item-active .feed__item-info .author__from {
+        text-align: center;
+    }
+
+
+
+}

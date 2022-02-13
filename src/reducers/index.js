@@ -1,7 +1,7 @@
 const initialState = {
     items: [],
     loadingStatus: 'idle',
-    showedYoutubeVideoModal: false,
+    showedYoutubeVideoModal: '',
 }
 
 const reducer = (state = initialState, action) => {
@@ -25,7 +25,7 @@ const reducer = (state = initialState, action) => {
         case 'SHOW_YOUTUBE_VIDEO_MODAL':
             return {
                 ...state,
-                showedYoutubeVideoModal: !state.showedYoutubeVideoModal
+                showedYoutubeVideoModal: action.payload,
             }
         
         default: return state

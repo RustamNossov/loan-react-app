@@ -1,17 +1,20 @@
-import {useState,useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage, useField } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuidv4 } from 'uuid';
 import { useHttp } from '../../hooks/http.hook';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { dataFetched, dataFetching, dataFetchingError } from '../../actions';
+import Spinner from "../Spinner/Spinner";
 
 //========style=======
 import "./LetUsHelpYouForm.css";
 
+
 const LetUsHelpYouForm = () => {
-        const { request } = useHttp();
+    const { request } = useHttp();
     const dispatch = useDispatch();
+    const {loadingStatus} = useSelector(state=>state);
+
     
     
 
@@ -23,12 +26,8 @@ const LetUsHelpYouForm = () => {
                     actions.resetForm(); 
                     dispatch(dataFetched([]))
                 })
-            .cath(dispatch(dataFetchingError()))                
+             .cath(()=>dispatch(dataFetchingError()))                
     }
-
-    
-
-    
 
     return (
         <Formik 
@@ -148,7 +147,11 @@ const LetUsHelpYouForm = () => {
                     </div>
                 </div>
                 <div className="form__block">
-                    <button type="submit" className="btn">Send</button>
+                    {/* <button type="submit" className="btn">Send</button> */}
+                    <button type="submit" className="btn">
+                        {loadingStatus === 'loading' ? <Spinner className="spinner" /> : "Send"}
+                    </button>
+                    {loadingStatus === 'error' &&  <div className="error white">Something went wrong. Please try again latter.</div> }
                     <div className="policy">By clicking «Send» I am agreed<br/>
                         with <a href="#" >Privacy Policy</a>.</div>
                 </div>

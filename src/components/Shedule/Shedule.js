@@ -1,19 +1,25 @@
 import {useEffect} from "react";
-
+import { useDispatch, useSelector } from "react-redux";
+import { showYoutubeVideoModal } from '../../actions';
 //=======components========
 import SideControl from "../SideControl/SideControl";
 import Menu from "../Menu/Menu";
 import SheduleForm from "../SheduleForm/SheduleForm";
 import setOpacity from "../../hooks/setOpacity";
+import ModalVideoPlayer from "../ModalVideoPlayer/ModalVideoPlayer";
 
 //========style==============
 import "./Shedule.css";
 
 const Shedule = () => {
+    const dispatch = useDispatch();
+    const {showedYoutubeVideoModal} = useSelector(state=>state);
     useEffect(()=>setOpacity('.page', "1"), [])
 
     return (
         <div className="schedule page">
+            { showedYoutubeVideoModal && <ModalVideoPlayer videoLink={showedYoutubeVideoModal}/> }
+
             <SideControl page={6}/>
             <Menu bnt={false} logotype={false}/>
 
@@ -45,7 +51,7 @@ const Shedule = () => {
                         </div>
                         <div className="video">
                             <div className="play">
-                                <div className="play__circle">
+                                <div className="play__circle" onClick={()=>dispatch(showYoutubeVideoModal("-5AoKE1odIc"))}>
                                     <svg viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M14 8L0 16V0L14 8Z" fill="#6D53AF"></path>
                                     </svg>

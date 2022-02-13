@@ -1,11 +1,9 @@
-import { useEffect, useState, useRef } from "react";
-import { useHttp } from '../../hooks/http.hook';
-import { useImgImport } from "../../hooks/imgImport.hook";
+import { useEffect } from "react";
+import  { useTouchSlide } from "../../hooks/onTouchSlide.hook";
 import { useDispatch, useSelector } from "react-redux";
-import { sliderFetching, sliderFetched, sliderFetchingError, showYoutubeVideoModal } from '../../actions';
+import { showYoutubeVideoModal } from '../../actions';
 //=======components========
 import SideControl from "../SideControl/SideControl";
-import Menu from "../Menu/Menu";
 import ShowupSlider from "../ShowupSlider/ShowupSlider"
 import ModalVideoPlayer from "../ModalVideoPlayer/ModalVideoPlayer";
 import withSlider from "../withSlider/withSlider";
@@ -20,17 +18,25 @@ const MainSlide = ({onNextSlide, onPrevSlide, elements}) => {
    
     const dispatch = useDispatch();
     const {showedYoutubeVideoModal} = useSelector(state=>state);
-    
+   const {onTouchStart, onTouchMove, onTouchEnd} = useTouchSlide();
+     
     useEffect(()=>setOpacity('.page', "1"), [])
     
     //=======show video ============    https://www.youtube.com/embed/vZ4Sne0wdxY
     const onShowVideo = () => {
-        dispatch(showYoutubeVideoModal())
+        dispatch(showYoutubeVideoModal("vZ4Sne0wdxY"))
     }
 
+   
+
     return (
-        <div className="showup page">
-            { showedYoutubeVideoModal ? <ModalVideoPlayer videoLink={"https://www.youtube.com/embed/vZ4Sne0wdxY"}/> : null }
+        <div className="showup page" 
+            // onTouchStart={(e)=>onTouchStart(e)}
+            // onTouchMove={(e)=>onTouchMove(e)}
+            // onTouchEnd={(e)=>onTouchEnd(e)}
+
+            >
+            { showedYoutubeVideoModal && <ModalVideoPlayer videoLink={showedYoutubeVideoModal}/> }
             
             <SideControl page={1}/>
             
@@ -78,7 +84,10 @@ const MainSlide = ({onNextSlide, onPrevSlide, elements}) => {
                         </button>
                     </div>
                 </div>
-                <div className="showup__content-slider" >
+                <div className="showup__content-slider" 
+                        onTouchStart={(e)=>onTouchStart(e)}
+                        onTouchMove={(e)=>onTouchMove(e)}
+                        onTouchEnd={()=>onTouchEnd(onNextSlide, onPrevSlide)}>
                     <div className="showup__content-slider-container">
                         {elements}  
                     </div>
