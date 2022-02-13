@@ -1,5 +1,9 @@
 # This is the third sample project of mine for the portfolio
 
+## Short description 
+This is a refactoring of the Loan application to React, which I previously automated in native JS.
+(https://github.com/RustamNossov/LOAN)
+
 ## Used technologies
 
 The application was created using the JavaScript library - React.
